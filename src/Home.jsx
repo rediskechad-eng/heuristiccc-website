@@ -627,22 +627,26 @@ export default function Home() {
                 />
               </div>
 
-              <label className="flex items-start gap-3 text-xs text-gray-300 leading-relaxed cursor-pointer">
+              <label
+                htmlFor="sms_opt_in"
+                className="flex items-start gap-3 rounded-md border border-gray-700 bg-gray-900/60 p-4 text-sm text-gray-200 leading-relaxed cursor-pointer hover:border-gray-500"
+              >
                 <input
+                  id="sms_opt_in"
                   type="checkbox"
                   name="sms_opt_in"
                   value="yes"
                   required
-                  className="mt-0.5 h-4 w-4 shrink-0 rounded border-gray-500 text-blue-600 focus:ring-2 focus:ring-blue-500"
+                  style={{ accentColor: "#2563eb" }}
+                  className="mt-1 h-5 w-5 shrink-0 cursor-pointer appearance-auto bg-white"
                 />
                 <span>
-                  By checking this box, I agree to receive SMS messages from Heuristic Consulting
-                  Corporation regarding my inquiry. Reply STOP to opt out. Msg &amp; data rates may
-                  apply. See our{" "}
-                  <a href="/privacy" className="underline text-gray-100 hover:text-white">
-                    Privacy Policy
-                  </a>{" "}
-                  for details on how we handle your information.
+                  I agree to receive SMS messages from Heuristic Consulting Corporation. Reply STOP
+                  to opt out. Msg &amp; data rates may apply. View our{" "}
+                  <a href="/privacy" className="underline text-white hover:text-blue-300">
+                    privacy policy
+                  </a>
+                  .
                 </span>
               </label>
 
