@@ -585,6 +585,37 @@ export default function Home() {
 
               <div>
                 <label className="block text-sm font-medium text-gray-200 mb-2">
+                  Phone
+                </label>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <input
+                    type="tel"
+                    name="phone_area"
+                    placeholder="Area Code (e.g., 612)"
+                    inputMode="numeric"
+                    pattern="[0-9]{3}"
+                    maxLength={3}
+                    required
+                    className="w-full rounded-md bg-white text-gray-900 p-3 outline-none ring-1 ring-transparent focus:ring-2 focus:ring-blue-500"
+                  />
+                  <input
+                    type="tel"
+                    name="phone_number"
+                    placeholder="Phone Number (e.g., 5551234)"
+                    inputMode="numeric"
+                    pattern="[0-9]{7}"
+                    maxLength={7}
+                    required
+                    className="w-full rounded-md bg-white text-gray-900 p-3 outline-none ring-1 ring-transparent focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <p className="mt-2 text-xs text-gray-400">
+                  US phone format only. Example: 612 and 5551234.
+                </p>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-200 mb-2">
                   Objective
                 </label>
                 <textarea
@@ -595,6 +626,25 @@ export default function Home() {
                   className="w-full rounded-md bg-white text-gray-900 p-3 outline-none ring-1 ring-transparent focus:ring-2 focus:ring-blue-500"
                 />
               </div>
+
+              <label className="flex items-start gap-3 text-xs text-gray-300 leading-relaxed cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="sms_opt_in"
+                  value="yes"
+                  required
+                  className="mt-0.5 h-4 w-4 shrink-0 rounded border-gray-500 text-blue-600 focus:ring-2 focus:ring-blue-500"
+                />
+                <span>
+                  By checking this box, I agree to receive SMS messages from Heuristic Consulting
+                  Corporation regarding my inquiry. Reply STOP to opt out. Msg &amp; data rates may
+                  apply. See our{" "}
+                  <a href="/privacy" className="underline text-gray-100 hover:text-white">
+                    Privacy Policy
+                  </a>{" "}
+                  for details on how we handle your information.
+                </span>
+              </label>
 
               <button
                 type="submit"
@@ -628,6 +678,14 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="font-medium text-gray-300">612-404-6281</p>
           <p className="mt-1">lise@heuristiccc.com</p>
+          <p className="mt-4">
+            <a
+              href="/privacy"
+              className="text-gray-300 hover:text-white underline-offset-2 hover:underline"
+            >
+              Privacy Policy
+            </a>
+          </p>
           <p className="mt-4">
             © {new Date().getFullYear()} Heuristic Consulting Corporation
           </p>
