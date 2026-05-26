@@ -645,6 +645,10 @@ export default function Home() {
                   to opt out. Msg &amp; data rates may apply. View our{" "}
                   <a href="/privacy" className="underline text-white hover:text-blue-300">
                     privacy policy
+                  </a>{" "}
+                  and{" "}
+                  <a href="/terms" className="underline text-white hover:text-blue-300">
+                    SMS Terms
                   </a>
                   .
                 </span>
@@ -688,6 +692,13 @@ export default function Home() {
               className="text-gray-300 hover:text-white underline-offset-2 hover:underline"
             >
               Privacy Policy
+            </a>
+            <span className="mx-2 text-gray-600">·</span>
+            <a
+              href="/terms"
+              className="text-gray-300 hover:text-white underline-offset-2 hover:underline"
+            >
+              SMS Terms
             </a>
           </p>
           <p className="mt-4">
